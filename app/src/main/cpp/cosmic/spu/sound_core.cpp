@@ -4,6 +4,7 @@ namespace cosmic::spu {
         status = {};
         transferAddr = 0;
         currentAddr = 0;
+        control = 0; // Added: Reset control register
 
     }
     void Spu2::writeDmaData(u32 data) {

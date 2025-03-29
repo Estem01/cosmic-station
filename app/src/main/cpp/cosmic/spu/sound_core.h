@@ -24,6 +24,7 @@ namespace cosmic::spu {
             {
         }
         SpuStatus status;
+        u32 control{0}; // Added: SPU2 control register directly in class
 
         void resetSound();
         u32 transferAddr;
@@ -31,6 +32,7 @@ namespace cosmic::spu {
 
         void writeDmaData(u32 data);
         u32 requestDmaData();
+        u32 getControl() const { return control; } // Added: Getter for control
     private:
         u16 spuRead(u32 address);
         void spuWrite(u32 address, u16 value);
